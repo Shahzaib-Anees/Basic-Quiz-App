@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/gif" href="./Media/Images/thumbnail.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- StartUp  -->
+    <article id="main-cont">
+        <div class="mnd-img-cont">
+            <img src="./Media/Images/mind-icn.svg" alt="Image">
+        </div>
+        <div class="user-info">
+            <h1>The Ultimate Quiz App</h1>
+            <div class="info">
+                <label for="name">
+                    <span>What is your name ?</span>
+                    <input type="text" placeholder="Enter your name" id="user-name" class="input-field" required>
+                </label>
+                <label for="email">
+                    <span>What is your email address ?</span>
+                    <input type="email" placeholder="Enter your email" id="user-email" class="input-field" required>
+                </label>
+                <label for="category">
+                    <span>In which category you want to play the quiz ?</span>
+                    <select name="category" id="category" class="input-field" onchange="categorySelection(this)">
+                        <option value="category">Any Category</option>
+                    </select>
+                </label>
+                <label for="timer">
+                    <span>Please select the countdown time for your quiz.</span>
+                    <div class="timer-selection">
+                        <select name="timer" id="min-time">
+                            <option value="minutes">Select Minutes</option>
+                        </select>
+                    </div>
+                </label>
+            </div>
+            <div class="play-btn-cont">
+                <button type="submit" id="quiz-starter">
+                    <i class="fa-solid fa-play" id="play-button"></i>
+                    <span>Get Start</span>
+                </button>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Quiz Section -->
+    <article id="quiz-body">
+        <h1 id="quiz-category-name">HTML Quiz</h1>
+        <div class="qu-head">
+            <div class="qu-no">
+                <i class="fa-regular fa-circle-question"></i>
+                <p>Question no <span id="qu-number">1</span></p>
+            </div>
+            <div class="timer">
+                <div id="minutes-cont">2</div>
+                <div id="seconds-cont">59</div>
+            </div>
+        </div>
+        <div class="objective-content">
+            <div class="question-cont">
+                <span>Q:-</span>
+                <p id="question">What is the full form of HTML?</p>
+            </div>
+            <div id="option-cont"></div>
+            <button id="submit-Btn">
+                 Enter
+            </button>
+        </div>
+    </article>
+</body>
+<script src="./script/app.js"></script>
+
+</html>
