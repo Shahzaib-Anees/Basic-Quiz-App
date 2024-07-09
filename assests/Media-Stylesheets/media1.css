@@ -1,0 +1,83 @@
+@media(min-width : 200px) and (max-width : 800px) {
+    body {
+        padding: 0px 5px;
+    }
+
+    #main-cont {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 25px 5px;
+    }
+
+    .user-info {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0px;
+    }
+
+    .user-info>h1 {
+        font-size: 25px;
+    }
+
+    .info {
+        gap: 10px;
+    }
+
+    .info>label>span {
+        font-size: 14px;
+    }
+
+    .timer-selection>select {
+        width: 100%;
+        color: #565656;
+        font-family: var(--font);
+        font-weight: 500;
+    }
+
+    /* Quiz Body  */
+    #quiz-body {
+        padding: 20px 15px;
+        width: 100%;
+    }
+
+    #quiz-body>h1 {
+        font-size: 30px;
+    }
+
+    .qu-head {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .qu-no {
+        font-size: 25px;
+    }
+
+    /* Timer for Quiz App  */
+    .timer {
+        margin-left: 10px;
+    }
+
+    /* Objective Content  */
+    .objective-content {
+        gap: 10px;
+    }
+
+    .question-cont>span {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .question-cont>#question {
+        font-size: 20px;
+        margin: 0%;
+        line-height: 20px;
+        font-weight: 600;
+    }
+
+}

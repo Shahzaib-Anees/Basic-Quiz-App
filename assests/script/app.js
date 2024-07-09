@@ -332,7 +332,6 @@ function startQuiz() {
         return;
     }
     minutes = parseInt(minutesTimer.value);
-
 }
 
 
@@ -348,8 +347,8 @@ function quizTimer() {
             return;
         }
     }
-    minutesCountTimerDOM.innerHTML = `${minutes - 1}`;
-    secondsCountTimerDOM.innerHTML = seconds;
+    minutesCountTimerDOM.innerHTML = minutes < 10 ? "0" + (minutes - 1) : `${minutes - 1}`;
+    secondsCountTimerDOM.innerHTML = seconds < 10 ? "0" + seconds : seconds;
     setTimeout(quizTimer, 1000);
 }
 
@@ -390,7 +389,7 @@ function getAnswerValue(answer) {
 const userCorrectAnswersArr = [];
 answerSubmitBtn.addEventListener("click", () => {
     let correctOption = quiz[userSelectCategory].questions[questionCount].correctOption;
-    if(userAnswer === correctOption){
+    if (userAnswer === correctOption) {
         userCorrectAnswersArr.push(userAnswer);
         console.log("Correct Answer");
     }
@@ -399,7 +398,3 @@ answerSubmitBtn.addEventListener("click", () => {
     console.log(userAnswer);
     console.log(userCorrectAnswersArr);
 })
-
-
-
-
