@@ -344,6 +344,7 @@ function quizTimer() {
             alert("Time is up");
             minutesCountTimerDOM.innerHTML = "00";
             secondsCountTimerDOM.innerHTML = "00";
+            location.href = "./assests/Pages/result.html";
             return;
         }
     }
@@ -371,7 +372,8 @@ function quizDOM() {
     questionNumberCont.innerText = (questionCount + 1);
     domOptionContainer.innerHTML = "";
     if (questionCount === quiz[userSelectCategory].questions.length) {
-        alert("Quiz Finished")
+        alert("Quiz Finished");
+        location.pathname = "./assests/Pages/result.html";
         return;
     }
     domQuestionContainer.innerText = quiz[userSelectCategory].questions[questionCount].q;
@@ -387,6 +389,7 @@ function getAnswerValue(answer) {
 }
 
 const userCorrectAnswersArr = [];
+const filteredObjective = [];
 answerSubmitBtn.addEventListener("click", () => {
     let correctOption = quiz[userSelectCategory].questions[questionCount].correctOption;
     if (userAnswer === correctOption) {
